@@ -8,15 +8,14 @@ import data from './data.json'
 import { GET_USERS } from './redux/reducerKeys';
 
 function App() {
- const dispatch = useDispatch()
- useEffect(()=>{
-  return()=>{dispatch({type:GET_USERS, payload:data})}
- },[])
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch({ type: GET_USERS, payload: data })
+  }, [])
 
   return (
     <>
       <Header />
-      {/* <UserList /> */}
     </>
   )
 }
